@@ -6,7 +6,6 @@ pipeline {
     }
     options {
         timestamps()
-        ansiColor('xterm')
     }
     stages {
         stage('Checkout code from SCM') {
