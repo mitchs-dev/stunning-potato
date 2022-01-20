@@ -8,6 +8,7 @@ pipeline {
     stages {
         stage('Checkout code from SCM') {
             steps {
+                // This step checks out the code
                 checkout scm
             }
         }
