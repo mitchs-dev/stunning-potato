@@ -32,6 +32,7 @@ pipeline {
         stage('Cleanup') {
             steps {
                 sh 'docker image rm -f doz2h:session6'
+                sh 'docker image rm -f python:3.9.10'
                 cleanWs()
             }
         }
