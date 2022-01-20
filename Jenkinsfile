@@ -4,7 +4,10 @@ pipeline {
             label 'MyAgent'
         }
     }
-
+    options {
+        timestamps()
+        ansiColor('xterm')
+    }
     stages {
         stage('Checkout code from SCM') {
             steps {
@@ -33,4 +36,5 @@ pipeline {
             }
         }
     }
+
 }
