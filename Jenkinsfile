@@ -17,6 +17,8 @@ pipeline {
         }
         stage('Build Image') {
             steps {
+		// This will remove the 'doz2h:session6' image
+		// This should not exist on the machine however
                 sh 'docker image rm -f doz2h:session6'
                 sh 'docker build -t doz2h:session6 .'
             }
